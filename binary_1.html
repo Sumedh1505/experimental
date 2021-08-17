@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experimentation Tool</title>
+</head>
+<body background="https://s22.q4cdn.com/351912490/files/design/Logo-Falabella-Marca_.png">
+<form action="/pre_exp_result" enctype="multipart/form-data">
+
+    <h4>Complusory Arguments:</h4>
+    <label>Sample Average: </label>
+        <input type="text" name="mean" placeholder="Mean range (0,1)", step="any">
+    <br>
+    <br>
+
+    <label>Increase (%): </label>
+        <input type="text" name="inc" placeholder="% inc" min="0" max="1" step="any">
+    <br>
+    <br>
+
+    <label>Control Group (%): </label>
+        <input type="text" name="control" placeholder="% Control Group" min="0" max="1" step="any">
+    <br>
+    <br>
+    <h4>Optional Arguments: </h4>
+    <label>Alpha: </label>
+        <input type="text" name="alpha" placeholder="alpha" step="any" value="0.05">
+    <br>
+    <br>
+
+    <label>Power: </label>
+        <input type="text" name="power" placeholder="power" min="0" max="100" step="any" value="0.8">
+    <br>
+    <br>
+    <br>
+
+<input name="choice" type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experimentation Tool</title>
+</head>
+<body>
+<form method="POST" action="/post_exp_result">
+{% for each_p_value, each_test, each_target in p_test_tar %}
+    {% if each_p_value < 0.05 %}
+        <p>p_value: {{each_p_value}}</p>
+        <p>alpha: 0.05</p>
+        <p>Test: {{each_test}}</p>
+        <p>Target Column: {{each_target}}</p>
+        <p>There <b>is an effect</b> of Treatment in the campaign</p>
+        <br>
+    {% endif %}
+
+    {% if each_p_value >= 0.05 %}
+        <p>p_value: {{each_p_value}}</p>
+        <p>alpha: 0.05</p>
+        <p>Test: {{each_test}}</p>
+        <p>Target Column: {{each_target}}</p>
+        <p>There <b>is no effect</b> of Treatment in the campaign</p>
+        <br>
+    {% endif %}
+{% endfor %}
+
+
+<p>Click on the image to download:<p>
+<a href="static/output.jpg" download>
+  <img src="static/output.jpg">
+</a>
+
+
+</form>
+</body>
+</html>

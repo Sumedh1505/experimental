@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experimentation Tool</title>
+</head>
+<body background="https://s22.q4cdn.com/351912490/files/design/Logo-Falabella-Marca_.png">
+<form method="POST" action="/post_exp_result" enctype="multipart/form-data">
+<h3>Choose the Appropriate Values</h3>
+<label for="treatment">Choose the Treatment Column name:    </label>
+<select id="treatment" name= treatment>
+    <option value= "{{treat_col}}" SELECTED>{{treat_col}}</option>
+</select>
+
+<br>
+<br>
+<label for="treatment">Choose the Control Value:        </label>
+<select id="control" name= control>
+    {% for each_control in control_list %}
+    <option value= "{{each_control}}" SELECTED>{{each_control}}</option>
+    {% endfor %}
+</select>
+
+<br>
+<br>
+<label for="target">Choose the Target Column(s):    </label>
+{% for each_target in target_col %}
+<input type="checkbox" name="target" value="{{each_target}}">
+<label>{{each_target}}</label>
+{% endfor %}</select>
+
+<br>
+<br>
+<label for="test_types">Choose the Test(s):         </label>
+{% for each_test in test_types %}
+<input type="checkbox" name= "test_types" value="{{each_test}}">
+<label>{{each_test}}</label>
+{% endfor %}
+</select>
+
+<br>
+<br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

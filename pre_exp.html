@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experimentation Tool</title>
+</head>
+<body background="https://s22.q4cdn.com/351912490/files/design/Logo-Falabella-Marca_.png">
+<form action="/redirect" enctype="multipart/form-data">
+
+<h3>Choose your Experiment:</h3>
+<label for="binary">Target Metric Type:  </label>
+<select id="binary" name= binary>
+    <option value= "Binary" SELECTED>Binary</option>
+    <option value= "Continuous" SELECTED>Continuous</option>
+
+</select>
+<br>
+<br>
+<label for="choice">Input: </label>
+<select id="choice" name= choice>
+    <option value= "Total Population" SELECTED>Total Population</option>
+    <option value= "Control Group %" SELECTED>Control Group %</option>
+
+</select>
+<br>
+<br>
+<br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

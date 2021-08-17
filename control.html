@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experimentation Tool</title>
+</head>
+<body background="https://s22.q4cdn.com/351912490/files/design/Logo-Falabella-Marca_.png">
+<form method="PRE" action="/result" enctype="multipart/form-data">
+<h3>Choose Appropriate Value</h3>
+<label for="treatment">Choose Control Value</label>
+<select id="treatment" name= treatment>
+    {% for each_control in control %}
+    <label><input type="checkbox" name="check" value="{each_control}}">{each_control}}</label>
+    {% endfor %}
+</select>
+
+</form>
+</body>
+</html>
+
+<p>Choose your monster's features:</p>
+
+<div>
+  <input type="checkbox" id="scales" name="scales"
+         checked>
+  <label for="scales">Scales</label>
+</div>
+
+<div>
+  <input type="checkbox" id="horns" name="horns">
+  <label for="horns">Horns</label>
+</div>
